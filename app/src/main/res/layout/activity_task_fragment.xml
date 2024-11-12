@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TaskFragment">
+
+    <!-- RecyclerView that scrolls -->
+
+    <!-- Floating Action Button positioned at the bottom center -->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewTasks"
+        android:layout_width="match_parent"
+        android:layout_height="665dp"
+        android:layout_marginBottom="110dp"
+        android:padding="16dp"
+        tools:listitem="@layout/item_task" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="99dp"
+        android:backgroundTint="@color/secondaryColor"
+        android:src="@android:drawable/ic_menu_add"
+        app:tint="@android:color/white" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="112dp"
+        android:background="@color/accentColorLight"
+        android:text="\n Welcome....."
+        android:textSize="48sp" />
+
+</FrameLayout>

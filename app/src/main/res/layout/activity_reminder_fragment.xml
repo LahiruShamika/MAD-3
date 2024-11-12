@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReminderFragment">
+
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="top"
+        android:background="@color/purpleLight">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginVertical="20dp"
+            android:orientation="vertical">
+
+            <!-- Reminder Title Input -->
+            <EditText
+                android:id="@+id/etReminderTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:hint="Reminder Title"
+                android:padding="16dp"
+                android:textSize="16sp" />
+
+            <!-- Date Picker -->
+            <DatePicker
+                android:id="@+id/datePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="378dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp" />
+
+            <!-- Time Picker -->
+            <TimePicker
+                android:id="@+id/timePicker"
+                android:layout_width="wrap_content"
+                android:layout_height="132dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:timePickerMode="spinner" />
+
+            <!-- Set Reminder Button -->
+            <!--            <Button-->
+            <!--                android:layout_gravity="center"-->
+            <!--                android:id="@+id/btnSetReminder"-->
+            <!--                android:layout_width="wrap_content"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:layout_marginTop="32dp"-->
+            <!--                android:text="Set Reminder"-->
+            <!--                android:backgroundTint="@color/primaryColor"-->
+            <!--                android:textColor="@android:color/white"-->
+            <!--                android:textStyle="bold"-->
+            <!--                android:paddingStart="32dp"-->
+            <!--                android:paddingEnd="32dp"-->
+            <!--                android:paddingTop="16dp"-->
+            <!--                android:paddingBottom="16dp" />-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Floating Action Button positioned at the bottom center -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSetReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="16dp"
+        android:src="@android:drawable/ic_menu_add"
+        app:tint="@android:color/white"
+        android:backgroundTint="@color/secondaryColor" />
+
+</FrameLayout>
